@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl font-bold text-light-font-heading dark:text-dark-font-heading;
+  }
+  h2 {
+    @apply text-4xl font-bold text-light-font-heading dark:text-dark-font-heading;
+  }
+  h3 {
+    @apply text-3xl font-bold text-light-font-heading dark:text-dark-font-heading;
+  }
+  h4 {
+    @apply text-2xl font-bold text-light-font-heading dark:text-dark-font-heading;
+  }
+  h5 {
+    @apply text-xl font-bold text-light-font-heading dark:text-dark-font-heading;
+  }
+  h6 {
+    @apply text-lg font-bold text-light-font-heading dark:text-dark-font-heading;
+  }
+  input {
+    @apply rounded bg-transparent border border-light-input dark:border-dark-input focus:outline-none;
+  }
+  select {
+    @apply block appearance-none w-full bg-transparent border border-light-input dark:border-dark-input rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 focus:bg-transparent;
+  }
+  tr {
+    @apply border-b border-light-border dark:border-dark-border p-0;
+  }
+  thead > tr {
+    @apply text-left text-light-font-heading dark:text-dark-font-heading;
+  }
+  tbody > tr {
+    @apply hover:bg-light-secondary dark:hover:bg-dark-secondary;
+  }
+  th:last-of-type {
+    @apply border-r border-transparent dark:border-transparent;
+  }
+  th,
+  td {
+    @apply py-2 px-3;
+  }
+}
+
+@layer utilities {
+  .background-primary {
+    @apply bg-light dark:bg-dark;
+  }
+
+  .background-secondary {
+    @apply bg-light-secondary dark:bg-dark-secondary;
+  }
+
+  .color-primary {
+    @apply text-light-font dark:text-dark-font;
+  }
+
+  .color-header {
+    @apply text-light-font-heading dark:text-dark-font-heading;
+  }
+
+  .border-color {
+    @apply border-light-border dark:border-dark-border;
+  }
+
+  .border-input-color {
+    @apply border-light-input dark:border-dark-input;
+  }
+
+  .disabled {
+    @apply text-light-input dark:text-dark-input border-light-input dark:border-dark-input cursor-default;
+  }
+
+  .form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1em;
+    width: 1em;
+    background-color: transparent;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
+  .form-checkbox:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .form-checkbox:focus {
+    outline: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #eee;
+}
+
+.user-room,
+.chat-room,
+.auth-form {
+  width: 100%;
+}
+
+.user-room__content {
+  height: calc(100% - 6.95rem);
+}
+
+.chat-room__content {
+  height: calc(100% - 7.59rem);
+}
+
+@media (min-width: 640px) {
+  .auth-form {
+    width: 27rem;
+  }
+
+  .user-room__content {
+    height: calc(100% - 8.5rem);
+  }
+
+  .chat-room__content {
+    height: calc(100% - 9.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-room {
+    width: 25rem;
+  }
+
+  .chat-room {
+    width: calc(100% - 25rem);
+  }
+}

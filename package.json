@@ -1,0 +1,33 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "node js realtime chat app",
+  "main": "server.js",
+  "author": "iqbal_hasan <iqbalhasan387@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js",
+    "client": "npm start --prefix client",
+    "generate-db": "prisma migrate dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "@prisma/client": "^2.30.3",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.3",
+    "pusher": "^5.0.0",
+    "uuid": "^8.3.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12",
+    "prisma": "^2.30.3"
+  }
+}
