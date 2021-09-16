@@ -2,6 +2,12 @@ This is a [React.js](https://reactjs.org/) project bootstrapped with [`create-re
 
 ## Getting Started
 
+Before install node modules, make sure your npm version is up to date. Try:
+
+```bash
+npm install -g npm
+```
+
 First, install module for server:
 
 ```bash
